@@ -2,6 +2,10 @@
 
 
 # To the User:
+####NEW Disclaimer:
+DonkeyPunch nor the eXpochA4E development team get credit for the original work.
+We thank the original, current and past development contributors for their work.
+
 ####Read the instructions carefully. Before leaving any questions regarding DMS, please read through the [DMS "config.sqf"](https://github.com/Defent/DMS_Exile/blob/master/%40ExileServer/addons/a3_dms/config.sqf?ts=4); the majority of the questions we receive are answered (directly or indirectly) by the config.
 
 ####Disclaimer:
