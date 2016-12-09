@@ -367,6 +367,7 @@ _unit addMPEventHandler ["MPHit",'if (isServer) then
 		_hitby = _this select 1;
 		_unit setVariable["eXpochDMS_LastHitBy",_hitby];
 	};'];
+_unit addEventHandler ["HandleDamage",{	_this call ace_medical_fnc_handleDamage}];
 // Remove ramming damage from players.
 // Will not work if unit is not local (offloaded)
 if (DMS_ai_disable_ramming_damage) then
