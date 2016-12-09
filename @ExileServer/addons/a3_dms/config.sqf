@@ -425,8 +425,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MaxAIDistance					= 500;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
 	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
 
-	DMS_ai_offload_to_client			= true;						// Offload spawned AI groups to random clients. Helps with server performance.
-	DMS_ai_offload_Only_DMS_AI			= false;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
+	DMS_ai_offload_to_client			= false;						// Offload spawned AI groups to random clients. Helps with server performance.
+	DMS_ai_offload_Only_DMS_AI			= true;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
 	DMS_ai_offload_notifyClient			= true;					// Notify the client when AI has been offloaded to the client.
 
 	DMS_ai_allowFreezing				= true;						// Whether or not to "freeze" AI that are a certain distance away from players (and therefore inactive).

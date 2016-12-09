@@ -361,6 +361,12 @@ else
 // Soldier killed event handler
 _unit addMPEventHandler ["MPKilled",'if (isServer) then {_this call DMS_fnc_OnKilled;};'];
 
+_unit addMPEventHandler ["MPHit",'if (isServer) then 
+	{
+		_unit = _this select 0;
+		_hitby = _this select 1;
+		_unit setVariable["eXpochDMS_LastHitBy",_hitby];
+	};'];
 // Remove ramming damage from players.
 // Will not work if unit is not local (offloaded)
 if (DMS_ai_disable_ramming_damage) then

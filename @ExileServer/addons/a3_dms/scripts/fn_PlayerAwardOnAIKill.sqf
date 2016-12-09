@@ -29,10 +29,15 @@ exitWith
 	diag_log format ["DMS ERROR :: Calling DMS_fnc_PlayerAwardOnAIKill with invalid parameters: %1",_this];
 };
 
+if (isNull _playerObj)then
+{
+	_playerObj = _unit getVariable["eXpochDMS_LastHitBy",objNull];
+};
 
 private _playerUID = getPlayerUID _playerObj;
-
-if ((!isNull _playerObj) && {(_playerUID != "") && {_playerObj isKindOf "Exile_Unit_Player"}}) then
+_unitTypes = ["Exile_Unit_Player","eXpoch_Female_Prisoner_F","RyanZombiePlayer1","RyanZombiePlayer2","RyanZombiePlayer3","RyanZombiePlayer4","RyanZombiePlayer5","RyanZombiePlayer6"];
+_playerType = typeOf _playerObj;
+if ((!isNull _playerObj) && {(_playerUID != "") && {_playerType in _unitTypes}}) then
 {
 	// Check for individually defined AI money/respect/rank.
 	private _moneyChange = _unit getVariable ["DMS_AI_Money",0];

@@ -86,13 +86,13 @@ if ((!isNil "A3XAI_isActive") && {!DMS_ai_offload_Only_DMS_AI}) then
 	diag_log 'DMS DETECTED A3XAI. Enabling "DMS_ai_offload_Only_DMS_AI"!';
 	DMS_ai_offload_Only_DMS_AI = true;
 };
-/* Zombie Missions
+
 if ((isClass (configFile >> "CfgPatches" >> "Ryanzombies")) && {!DMS_ai_offload_Only_DMS_AI}) then
 {
 	diag_log 'DMS DETECTED RyanZombies. Enabling "DMS_ai_offload_Only_DMS_AI"!';
 	DMS_ai_offload_Only_DMS_AI = true;
 };
-*/
+
 if !(DMS_ai_offload_to_client) then
 {
 	DMS_ai_offloadOnUnfreeze = false;

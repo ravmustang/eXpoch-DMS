@@ -28,7 +28,7 @@ private _type 			= _unit getVariable ["DMS_AI_Type", "soldier"];
 private _launcher 		= secondaryWeapon _unit;
 private _launcherVar	= _unit getVariable ["DMS_AI_Launcher",""];
 private _playerObj		= objNull;
-
+_killer = _unit getVariable["eXpochDMS_LastHitBy",objNull];
 _unit call ([missionNamespace getVariable [_unit getVariable ["DMS_AI_CustomOnKilledFnc",""],{}]] param [0,{},[{}]]);
 
 // Some of the previously used functions work with non-local argument. Some don't. BIS is annoying
@@ -48,6 +48,7 @@ private _removeAll =
 moveOut _unit;
 
 _unit removeAllEventHandlers "HandleDamage";
+_unit removeAllMPEventHandlers "MPHit"; 
 _unit enableSimulationGlobal true;
 
 // Remove gear according to configs
