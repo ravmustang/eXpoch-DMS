@@ -128,9 +128,17 @@ else
 };
 
 // Set random DMS unit names if you don't want Arma assigned (real names)
-if !(DMS_AI_UseRealNames) then
+//if !(DMS_AI_UseRealNames) then
+//{
+//	_unit setName format["[DMS %1 %2 %3]",toUpper _side,_class,floor(random 1000)];
+//};
+
+if(DMS_AI_UseCustomNames)then
 {
-	_unit setName format["[DMS %1 %2 %3]",toUpper _side,_class,floor(random 1000)];
+	_clanTag = selectRandom(DMS_AI_ClanTags);
+	_unitName = selectRandom(DMS_AI_unitName);
+	_fullName = format["%1 %2",_clanTag,_unitName];
+	_unit setName [_fullName, _clanTag, _unitName];
 };
 
 if (_customGearSet isEqualTo []) then

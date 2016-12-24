@@ -257,19 +257,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											["medical",3],
 											["mercbase",2],
 											["mercenaries",3],
-											["nedbuilding1_mission",3],
-											["nedcar_mission",4],
-											["nedguns1_mission",3],
-											["nedhatchback_mission",3],
-											["nedhunter_mission",2],
-											["nedifrit_mission",2],
-											["nedlittlebird_mission",2],
-											["nedmedical1_mission",3],
-											["nedoffroad_mission",3],
-											["nedresearch_mission",3],
-											["nedsnipercamp_mission",3],
-											["nedstrider_mission",2],
-											["nedural_mission",3],
 											["roguenavyseals",3],
 											["thieves",3],
 											["walmart",3]
@@ -316,7 +303,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 /* AI Settings */
 	DMS_AI_Classname					= "O_recon_F";				// Since some of you wanted this...
 	DMS_AI_UseRealNames					= true;						// true if you want Arma assigned real names, false if you want random DMS assigned unit numbers
-
+	DMS_AI_UseCustomNames				= true;					//Setup Custom clan tags and custom names for all the AI :) we can even break this down into factions later if we need to :)
+	DMS_AI_ClanTags = ["[LORD]","[X9T]","alf","=RAV=","[CDAH]","-MM-","[NC]","LUZR","=FUQ=","ZoM","NGC",""];
+	DMS_AI_unitName = ["t0Rp3do","sh0cKw4v3","Detrich","FrankKross","F0rs4k3N","Bl00dTh1rsT","Th0RN","Zeu5","ZeroCool","PimpDaddyD","GhostP","Aunders","TRUMP","KillaryKunton","HappyPantz","MeSoGhey","HosstrollDamis","Coolio","Ch0d4","SukeLywalker","BarfLater","Hand4Hire","MercyMathers","FlownSideways","ErrorJordan","G0Tw3BK4m","sTanGoTchU"];
 	DMS_Show_Kill_Poptabs_Notification	= true;						// Whether or not to show the poptabs gained/lost message on the player's screen when killing an AI. (It will still change the player's money, it just won't show the "Money Received" notification)
 	DMS_Show_Kill_Respect_Notification	= true;						// Whether or not to show the "Frag Message" on the player's screen when killing an AI. (It will still change the player's respect, it just won't show the "AI Killed" frag message)
 	DMS_Show_Kill_Rank_Notification		= true;
