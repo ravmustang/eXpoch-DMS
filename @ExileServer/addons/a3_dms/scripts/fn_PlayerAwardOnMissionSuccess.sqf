@@ -4,13 +4,15 @@
 	Upgraded by DirtySanchez
 
 */
+_playersNear = [];
 _params = _this;
 _array = _params select 0;
 _completionType = _array select 0;
 _completionArray = _array select 1;
 _missionPos = _completionArray select 0;
 _distance = _completionArray select 1;
-_playersNear = nearestObjects[_missionPos,["Exile_Unit_Player","eXpoch_Female_Prisoner_F"],_distance];
+_playersNear = nearestObjects[_missionPos,["Exile_Unit_Player","eXpoch_Female_Prisoner_F"],500];
+if(_playersNear isEqualTo [])exitWith{diag_log "DMS Mission Capture Failure. player farther than 250m or NO Players captured";};
 _player = _playersNear select 0;
 if(isPlayer _player)then
 {
@@ -28,7 +30,8 @@ if(isPlayer _player)then
 	{
 		private _group = group _player;
 		private _members = units _group;
-			if ((count _members)>1) then
+		_newWeinerCaptures = _player getVariable ["ExileDMS", 0];
+		if ((count _members)>1) then
 		{
 			private _msg = format
 			[

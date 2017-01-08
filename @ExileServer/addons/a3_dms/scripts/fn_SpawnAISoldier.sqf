@@ -128,17 +128,9 @@ else
 };
 
 // Set random DMS unit names if you don't want Arma assigned (real names)
-//if !(DMS_AI_UseRealNames) then
-//{
-//	_unit setName format["[DMS %1 %2 %3]",toUpper _side,_class,floor(random 1000)];
-//};
-
-if(DMS_AI_UseCustomNames)then
+if !(DMS_AI_UseRealNames) then
 {
-	_clanTag = selectRandom(DMS_AI_ClanTags);
-	_unitName = selectRandom(DMS_AI_unitName);
-	_fullName = format["%1 %2",_clanTag,_unitName];
-	_unit setName [_fullName, _clanTag, _unitName];
+	_unit setName format["[DMS %1 %2 %3]",toUpper _side,_class,floor(random 1000)];
 };
 
 if (_customGearSet isEqualTo []) then
@@ -375,6 +367,7 @@ _unit addMPEventHandler ["MPHit",'if (isServer) then
 		_hitby = _this select 1;
 		_unit setVariable["eXpochDMS_LastHitBy",_hitby];
 	};'];
+
 _unit addEventHandler ["HandleDamage",{	_this call ace_medical_fnc_handleDamage}];
 // Remove ramming damage from players.
 // Will not work if unit is not local (offloaded)
@@ -431,6 +424,8 @@ if (_type == "Paratroopers") then
 _unit setVariable ["DMS_AISpawnTime", time];
 _unit setVariable ["DMS_AI_Side", _side];
 _unit setVariable ["DMS_AI_Type", _type];
+
+_unit triggerDynamicSimulation false;
 
 // Set money/respect variables
 _unit setVariable
