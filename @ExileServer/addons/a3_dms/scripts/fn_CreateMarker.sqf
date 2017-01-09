@@ -25,6 +25,7 @@ params
 	["_pos","ERROR",[[]],[2,3]],
 	["_text","ERROR",[""]],
 	["_difficulty","moderate",[""]]
+	["_side","bandit",[""]]
 ];
 
 if ((_pos isEqualTo "ERROR") || ("_text" isEqualTo "ERROR")) exitWith
@@ -99,9 +100,11 @@ if (DMS_ShowMarkerCircle) then
 	_circle setMarkerSize [150,150];
 };
 
+
+
 private _attentionCircle = createMarker [format['DMS_MissionMarkerAttentionCircle%1_%2',_num,round(time)], _pos];
 _attentionCircle 		setMarkerShape "ELLIPSE";
-_attentionCircle 		setMarkerColor (missionNamespace getVariable [format ["DMS_AttentionCircle_%1Color",toLower(_this select 3)],"bandit"]);
+_attentionCircle 		setMarkerColor (missionNamespace getVariable [format ["DMS_AttentionCircle_%1Color",toLower(_side)],"ColorRed"]);
 _attentionCircle 		setMarkerBrush "Solid";
 _attentionCircle 		setMarkerSize [150,150];
 
