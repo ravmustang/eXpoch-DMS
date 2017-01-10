@@ -24,7 +24,7 @@ params
 [
 	["_pos","ERROR",[[]],[2,3]],
 	["_text","ERROR",[""]],
-	["_difficulty","moderate",[""]]
+	["_difficulty","moderate",[""]],
 	["_side","bandit",[""]]
 ];
 
