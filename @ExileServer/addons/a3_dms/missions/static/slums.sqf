@@ -176,7 +176,8 @@ _markers =
 [
 	_pos,
 	_missionName,
-	_difficulty
+	_difficulty,
+	_side
 ] call DMS_fnc_CreateMarker;
 
 _circle = _markers select 1;

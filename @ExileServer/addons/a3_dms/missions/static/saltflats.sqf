@@ -213,7 +213,8 @@ _markers =
 [
 	_pos,
 	_missionName,
-	_difficulty
+	_difficulty,
+	_side
 ] call DMS_fnc_CreateMarker;
 
 (_markers select 1) setMarkerSize [750,750];

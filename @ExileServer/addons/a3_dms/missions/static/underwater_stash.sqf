@@ -234,7 +234,8 @@ _markers =
 [
 	_pos,
 	_missionName,
-	"hardcore"
+	"hardcore",
+	_side
 ] call DMS_fnc_CreateMarker;
 
 // Record time here (for logging purposes, otherwise you could just put "diag_tickTime" into the "DMS_AddMissionToMonitor" parameters directly)
