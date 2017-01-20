@@ -155,10 +155,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MinDistFromSouthBorder			= 250;						// Missions won't spawn in a position this many meters close to the southern map border.
 	DMS_MinDistFromNorthBorder			= 250;						// Missions won't spawn in a position this many meters close to the northern map border.
 	DMS_SpawnZoneMarkerTypes =			[							// If you're using custom spawn zone markers, make sure you define them here. CASE SENSITIVE!!!
-											"ExileSpawnZoneIcon"
+											"ExileSpawnZoneIcon",
+											"plp_mark_as_bicycle"
 										];
 	DMS_TraderZoneMarkerTypes =			[							// If you're using custom trader markers, make sure you define them here. CASE SENSITIVE!!!
-											"ExileTraderZoneIcon"
+											"ExileTraderZoneIcon",
+											"plp_mark_as_radiotower",
+											"plp_mark_as_hardpoint"
 										];
 	DMS_MixerMarkerTypes =				[							// If you're using custom concrete mixer map markers, make sure you define them here. CASE SENSITIVE!!!
 											"ExileConcreteMixerZoneIcon"
