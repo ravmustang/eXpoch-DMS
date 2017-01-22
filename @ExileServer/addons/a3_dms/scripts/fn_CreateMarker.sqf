@@ -127,6 +127,7 @@ if (_randomMarker) then
 
 	_circle setMarkerPos _npos;
 	_dot setMarkerPos _npos;
+	_attentionCircle setMarkerPos _npos;
 	_circle setMarkerBrush DMS_RandomMarkerBrush;
 
 	if (DMS_DEBUG) then
