@@ -105,9 +105,17 @@ if ((!isNull _playerObj) && {(_playerUID != "") && {_playerType in _unitTypes}})
 
 			if (_distance>DMS_AIKill_DistanceBonusMinDistance) then
 			{
-				private _distanceBonus = floor (_distance * DMS_AIKill_DistanceBonusCoefficient);
-				_attributes pushBack [format ["%1m RANGE BONUS",_distance], _distanceBonus];
-
+				if(_repChange < 0)then
+				{
+					_bonus = floor (_distance * DMS_AIKill_DistanceBonusCoefficient);
+					_distanceBonus = -(_bonus);
+					_attributes pushBack [format ["%1m RANGE BONUS",_distance], _distanceBonus];
+				}
+				else
+				{
+					_distanceBonus = floor (_distance * DMS_AIKill_DistanceBonusCoefficient);
+					_attributes pushBack [format ["%1m RANGE BONUS",_distance], _distanceBonus];
+				};
 				_repChange = _repChange + _distanceBonus;
 			};
 		};
